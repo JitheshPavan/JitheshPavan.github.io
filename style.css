@@ -51,9 +51,20 @@ dd { margin: 0; color: var(--muted); }
 strong { font-weight: 550; color: var(--ink); }
 #code { margin-bottom: 13px; }
 section > p { color: var(--muted); font-size: 14px; }
-.work { list-style: none; margin: 19px 0 0; padding: 0; font-size: 14px; }
-.work li + li { margin-top: 16px; }
-.work span { display: block; color: var(--muted); }
+.work { list-style: none; margin: 8px 0 0; padding: 0; }
+.work li { display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 20px; padding: 25px 0; }
+.work li + li { border-top: 1px solid var(--rule); }
+.work li:last-child { padding-bottom: 4px; }
+.project-number { color: var(--muted); font-family: Georgia, serif; font-size: 13px; padding-top: 2px; }
+.project-context { color: var(--muted); font-size: 12px; line-height: 1.6; margin: 0 0 7px; }
+.work h3 { color: var(--ink); font-size: 18px; font-weight: 550; letter-spacing: -.015em; line-height: 1.5; margin: 0; max-width: 470px; text-wrap: pretty; }
+.project-links { display: flex; flex-wrap: wrap; gap: 8px 25px; margin-top: 13px; font-size: 13px; }
+.project-links a { display: inline-flex; align-items: baseline; gap: 7px; padding: 3px 0; }
+.project-links span { font-size: 12px; }
+@media (max-width: 480px) {
+  .work li { grid-template-columns: 22px minmax(0, 1fr); gap: 12px; padding: 23px 0; }
+  .work h3 { font-size: 17px; }
+}
 footer { display: flex; align-items: baseline; justify-content: space-between; border-top: 1px solid var(--rule); padding-top: 23px; color: var(--muted); font-size: 12px; }
 footer p { margin: 0; }
 .back-top { text-decoration: none; font-size: 20px; padding: 0 8px; }
