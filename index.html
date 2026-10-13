@@ -7,7 +7,31 @@
     <meta name="description" content="Jithesh Pavan DSouza — physics graduate interested in AI safety, mechanistic interpretability, and practical machine learning.">
     <title>Jithesh Pavan DSouza</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=20261013-portrait-2">
+    <style>
+      /* Keep the portrait compact even when an older stylesheet is cached. */
+      .portrait {
+        position: relative;
+        float: right;
+        width: 112px;
+        height: 112px;
+        margin: 3px 0 14px 24px;
+        overflow: hidden;
+        border-radius: 50%;
+        background: #dcded4;
+      }
+      .portrait img {
+        position: absolute;
+        width: 200%;
+        max-width: none;
+        height: auto;
+        left: -50%;
+        top: -118%;
+      }
+      @media (max-width: 480px) {
+        .portrait { width: 96px; height: 96px; margin-left: 18px; }
+      }
+    </style>
   </head>
   <body>
     <main>
