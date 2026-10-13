@@ -12,10 +12,9 @@
       /* Keep the portrait compact even when an older stylesheet is cached. */
       .portrait {
         position: relative;
-        float: right;
-        width: 112px;
-        height: 112px;
-        margin: 3px 0 14px 24px;
+        width: 88px;
+        height: 88px;
+        margin: 0 auto 18px;
         overflow: hidden;
         border-radius: 50%;
         background: #dcded4;
@@ -29,13 +28,16 @@
         top: -118%;
       }
       @media (max-width: 480px) {
-        .portrait { width: 96px; height: 96px; margin-left: 18px; }
+        .portrait { width: 80px; height: 80px; margin-bottom: 16px; }
       }
     </style>
   </head>
   <body>
     <main>
       <header>
+        <div class="portrait">
+          <img src="assets/jithesh.jpeg" alt="Jithesh smiling outdoors" width="576" height="1280" decoding="async">
+        </div>
         <h1>Jithesh Pavan DSouza</h1>
         <nav aria-label="Contact and profiles">
           <a href="mailto:jithesh1602@gmail.com">Email</a>
@@ -43,9 +45,6 @@
           <a href="https://medium.com/@jitheshdsouza19">Check out my blogposts</a>
         </nav>
         <div class="introduction">
-          <div class="portrait">
-            <img src="assets/jithesh.jpeg" alt="Jithesh smiling outdoors" width="576" height="1280" decoding="async">
-          </div>
           <p class="intro">I'm Jithesh, a physics graduate from IISER Thiruvananthapuram with a minor in Data Science. I'm interested in AI safety and understanding how language models work.</p>
           <p>My projects have explored mechanistic interpretability, practical machine learning, and AI evaluation.</p>
         </div>
