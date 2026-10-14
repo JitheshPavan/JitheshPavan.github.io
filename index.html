@@ -12,11 +12,13 @@
       /* Keep the portrait compact even when an older stylesheet is cached. */
       .identity { display: flex; align-items: center; justify-content: center; gap: 20px; }
       .identity h1 { text-align: left; min-width: 0; }
+      .identity-details { min-width: 0; }
+      .identity nav { justify-content: flex-start; gap: 6px 24px; margin-top: 14px; }
       .portrait {
         position: relative;
         flex-shrink: 0;
-        width: 72px;
-        height: 72px;
+        width: 112px;
+        height: 112px;
         margin: 0;
         overflow: hidden;
         border-radius: 50%;
@@ -33,7 +35,8 @@
       @media (max-width: 480px) {
         .identity { gap: 14px; }
         .identity h1 { font-size: clamp(22px, 5.6vw, 27px); }
-        .portrait { width: 60px; height: 60px; }
+        .identity nav { gap: 2px 16px; margin-top: 8px; font-size: 13px; }
+        .portrait { width: 100px; height: 100px; }
       }
     </style>
   </head>
@@ -44,13 +47,15 @@
           <div class="portrait">
             <img src="assets/jithesh.jpeg" alt="Jithesh smiling outdoors" width="576" height="1280" decoding="async">
           </div>
-          <h1>Jithesh Pavan DSouza</h1>
+          <div class="identity-details">
+            <h1>Jithesh Pavan DSouza</h1>
+            <nav aria-label="Contact and profiles">
+              <a href="mailto:jithesh1602@gmail.com">Email</a>
+              <a href="https://github.com/JitheshPavan">GitHub</a>
+              <a href="https://medium.com/@jitheshdsouza19">Check out my blogposts</a>
+            </nav>
+          </div>
         </div>
-        <nav aria-label="Contact and profiles">
-          <a href="mailto:jithesh1602@gmail.com">Email</a>
-          <a href="https://github.com/JitheshPavan">GitHub</a>
-          <a href="https://medium.com/@jitheshdsouza19">Check out my blogposts</a>
-        </nav>
         <div class="introduction">
           <p class="intro">I'm Jithesh, a physics graduate from IISER Thiruvananthapuram with a minor in Data Science. I'm interested in AI safety and understanding how language models work.</p>
           <p>My projects have explored mechanistic interpretability, practical machine learning, and AI evaluation.</p>
