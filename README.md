@@ -1,11 +1,12 @@
 # Jithesh's personal website
 
-A small static page for GitHub Pages. No build tools, JavaScript, tracking, or external fonts.
+A small static page for GitHub Pages. No build tools, tracking, or external fonts. A small script highlights the current section; navigation and expandable project details also work without JavaScript.
 
 ## Edit
 
 - `index.html`: biography, experience, and links.
 - `style.css`: typography, spacing, and colors.
+- `navigation.js`: highlights the current section in the sticky navigation.
 
 ## Preview
 

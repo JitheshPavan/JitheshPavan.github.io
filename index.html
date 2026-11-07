@@ -7,9 +7,18 @@
     <meta name="description" content="Jithesh Pavan DSouza — physics graduate working on AI safety, mechanistic interpretability, model post-training, and evaluation.">
     <title>Jithesh Pavan DSouza · AI safety &amp; evaluation</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="style.css?v=20261107">
+    <link rel="stylesheet" href="style.css?v=20261107-nav">
+    <script src="navigation.js?v=20261107" defer></script>
   </head>
   <body>
+    <div class="page-shell">
+    <nav class="section-nav" aria-label="Page sections">
+      <span class="nav-label">On this page</span>
+      <a href="#top" aria-current="location">About</a>
+      <a href="#research">Research</a>
+      <a href="#background">Experience</a>
+      <a href="#writing">Writing</a>
+    </nav>
     <main id="top">
       <header>
         <div class="identity">
@@ -41,7 +50,10 @@
               <p class="project-context"><span class="status">Ongoing research</span> · Sept 2026–present</p>
               <h3>FutureProbes: looking ahead at model behavior</h3>
               <p class="project-description">Can internal activations predict misaligned behavior before it appears in a model's outputs? I'm investigating this with lookahead linear probes, advised by Dr. Shivam Raval.</p>
-              <p class="project-description">I've implemented and tested a preliminary activation-extraction and probing framework, with experiments targeting reward hacking, sandbagging, manipulation, and deception.</p>
+              <details class="project-details">
+                <summary><span class="when-closed">More details</span><span class="when-open">Less details</span><span class="sr-only"> about FutureProbes</span></summary>
+                <p class="project-description">I've implemented and tested a preliminary activation-extraction and probing framework, with experiments targeting reward hacking, sandbagging, manipulation, and deception.</p>
+              </details>
             </div>
           </li>
           <li>
@@ -49,12 +61,16 @@
             <div class="project-body">
               <p class="project-context">AIPlans · Sole implementer · 2025–26</p>
               <h3>Model Diffing</h3>
-              <p class="project-description">I independently developed and ran workflows spanning dataset preparation, post-training, benchmarking, and checkpoint publication. Across the project, I applied GRPO, PPO, DPO, and KTO and fine-tuned Qwen models at 0.6B and 8B scales to study changes in behavior.</p>
-              <p class="project-description">I evaluated DPO-trained Qwen3-0.6B against its starting model on ARC, HellaSwag, TruthfulQA, and WinoGrande, and published model checkpoints, training details, and evaluation results on Hugging Face.</p>
+              <p class="project-description">I independently built and ran post-training and evaluation workflows to study changes in language-model behavior, from dataset preparation to published checkpoints.</p>
               <div class="project-links">
                 <a href="https://github.com/AI-Plans/Model-Diffing">View code <span aria-hidden="true">↗</span></a>
                 <a href="https://huggingface.co/collections/AIPlans/post-training-versions-qwen-06b">Models &amp; evaluations <span aria-hidden="true">↗</span></a>
               </div>
+              <details class="project-details">
+                <summary><span class="when-closed">More details</span><span class="when-open">Less details</span><span class="sr-only"> about Model Diffing</span></summary>
+                <p class="project-description">Across the project, I applied GRPO, PPO, DPO, and KTO and fine-tuned Qwen models at 0.6B and 8B scales.</p>
+                <p class="project-description">I evaluated DPO-trained Qwen3-0.6B against its starting model on ARC, HellaSwag, TruthfulQA, and WinoGrande, and published model checkpoints, training details, and evaluation results on Hugging Face.</p>
+              </details>
             </div>
           </li>
           <li>
@@ -62,7 +78,11 @@
             <div class="project-body">
               <p class="project-context">BS–MS thesis · IISER Thiruvananthapuram · 2023–24</p>
               <h3>Neural-network quantum states for fermionic systems</h3>
-              <p class="project-description">With Dr. Amal Medhi, I modeled strongly correlated fermions using neural-network quantum states and variational Monte Carlo. I simulated a 10 × 10 Hubbard lattice, observed a metal–insulator transition, and used singular value decomposition to address instability in the optimization.</p>
+              <p class="project-description">With Dr. Amal Medhi, I modeled strongly correlated fermions using neural-network quantum states and variational Monte Carlo.</p>
+              <details class="project-details">
+                <summary><span class="when-closed">More details</span><span class="when-open">Less details</span><span class="sr-only"> about neural-network quantum states</span></summary>
+                <p class="project-description">I simulated a 10 × 10 Hubbard lattice, observed a metal–insulator transition, and used singular value decomposition to address instability in the optimization.</p>
+              </details>
             </div>
           </li>
         </ul>
@@ -123,5 +143,6 @@
         <a class="back-top" href="#top" aria-label="Back to top">↑</a>
       </footer>
     </main>
+    </div>
   </body>
 </html>
