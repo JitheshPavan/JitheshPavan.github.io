@@ -4,47 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f8f6f1">
-    <meta name="description" content="Jithesh Pavan DSouza — physics graduate interested in AI safety, mechanistic interpretability, and practical machine learning.">
-    <title>Jithesh Pavan DSouza</title>
+    <meta name="description" content="Jithesh Pavan DSouza — physics graduate working on AI safety, mechanistic interpretability, model post-training, and evaluation.">
+    <title>Jithesh Pavan DSouza · AI safety &amp; evaluation</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="style.css?v=20261013-portrait-2">
-    <style>
-      /* Keep the portrait compact even when an older stylesheet is cached. */
-      .identity { display: flex; align-items: center; justify-content: center; gap: 20px; }
-      .identity h1 { text-align: left; min-width: 0; }
-      .identity-details { min-width: 0; }
-      .identity nav { justify-content: flex-start; gap: 6px 24px; margin-top: 14px; }
-      .portrait {
-        position: relative;
-        flex-shrink: 0;
-        width: 112px;
-        height: 112px;
-        margin: 0;
-        overflow: hidden;
-        border-radius: 50%;
-        background: #dcded4;
-      }
-      .portrait img {
-        position: absolute;
-        width: 200%;
-        max-width: none;
-        height: auto;
-        left: -50%;
-        top: -118%;
-      }
-      @media (min-width: 640px) {
-        .portrait { transform: translateX(-40px); }
-      }
-      @media (max-width: 480px) {
-        .identity { gap: 14px; }
-        .identity h1 { font-size: clamp(22px, 5.6vw, 27px); }
-        .identity nav { gap: 2px 16px; margin-top: 8px; font-size: 13px; }
-        .portrait { width: 100px; height: 100px; }
-      }
-    </style>
+    <link rel="stylesheet" href="style.css?v=20261107">
   </head>
   <body>
-    <main>
+    <main id="top">
       <header>
         <div class="identity">
           <div class="portrait">
@@ -55,75 +21,106 @@
             <nav aria-label="Contact and profiles">
               <a href="mailto:jithesh1602@gmail.com">Email</a>
               <a href="https://github.com/JitheshPavan">GitHub</a>
-              <a href="https://medium.com/@jitheshdsouza19">Check out my blogposts</a>
+              <a href="#writing">Writing</a>
+              <a href="assets/Jithesh-Pavan-DSouza-CV.pdf">CV <span class="file-type">(PDF)</span></a>
             </nav>
           </div>
         </div>
         <div class="introduction">
-          <p class="intro">I'm Jithesh, a physics graduate from IISER Thiruvananthapuram with a minor in Data Science. I'm interested in AI safety and understanding how language models work.</p>
-          <p>My projects have explored mechanistic interpretability, practical machine learning, and AI evaluation.</p>
+          <p class="intro">I'm Jithesh, a physics graduate from IISER Thiruvananthapuram working on AI safety and evaluation.</p>
+          <p>My current research explores whether language-model activations can reveal signs of misaligned behavior before it appears in generated outputs. Previously, at AIPlans, I independently built model post-training and evaluation workflows for studying changes in language-model behavior.</p>
         </div>
       </header>
 
-      <section aria-labelledby="background">
-        <h2 id="background">A little background</h2>
-        <dl class="timeline">
-          <div>
-            <dt>2025–26</dt>
-            <dd><strong><a href="https://aiplans.org/">AIPlans</a></strong><br>AI safety training and evaluation experiments.</dd>
-          </div>
-          <div>
-            <dt>2025</dt>
-            <dd><strong><a href="https://dobbe.ai/">Dobbe.ai</a></strong><br>Computer vision for dental imaging.</dd>
-          </div>
-          <div>
-            <dt>2019–24</dt>
-            <dd><strong>IISER Thiruvananthapuram</strong><br>BS–MS in Physics, with a minor in Data Science. My thesis explored neural-network quantum states for fermionic systems.</dd>
-          </div>
-        </dl>
-      </section>
-
-      <section aria-labelledby="code">
-        <h2 id="code">Code &amp; experiments</h2>
+      <section aria-labelledby="research">
+        <h2 id="research">Selected research &amp; projects</h2>
         <ul class="work">
           <li>
             <span class="project-number" aria-hidden="true">01</span>
             <div class="project-body">
-              <p class="project-context">AI-Plans</p>
-              <h3>Model-Diffing</h3>
-              <div class="project-links">
-                <a href="https://github.com/AI-Plans/Model-Diffing" aria-label="View Model-Diffing code on GitHub">View code <span aria-hidden="true">↗</span></a>
-              </div>
+              <p class="project-context"><span class="status">Ongoing research</span> · Sept 2026–present</p>
+              <h3>FutureProbes: looking ahead at model behavior</h3>
+              <p class="project-description">Can internal activations predict misaligned behavior before it appears in a model's outputs? I'm investigating this with lookahead linear probes, advised by Dr. Shivam Raval.</p>
+              <p class="project-description">I've implemented and tested a preliminary activation-extraction and probing framework, with experiments targeting reward hacking, sandbagging, manipulation, and deception.</p>
             </div>
           </li>
           <li>
             <span class="project-number" aria-hidden="true">02</span>
             <div class="project-body">
-              <p class="project-context">PyTorch · Machine translation</p>
-              <h3>Implementation of the original transformer from scratch</h3>
+              <p class="project-context">AIPlans · Sole implementer · 2025–26</p>
+              <h3>Model Diffing</h3>
+              <p class="project-description">I independently developed and ran workflows spanning dataset preparation, post-training, benchmarking, and checkpoint publication. Across the project, I applied GRPO, PPO, DPO, and KTO and fine-tuned Qwen models at 0.6B and 8B scales to study changes in behavior.</p>
+              <p class="project-description">I evaluated DPO-trained Qwen3-0.6B against its starting model on ARC, HellaSwag, TruthfulQA, and WinoGrande, and published model checkpoints, training details, and evaluation results on Hugging Face.</p>
               <div class="project-links">
-                <a href="https://github.com/JitheshPavan/GPT_Translator" aria-label="View transformer code on GitHub">View code <span aria-hidden="true">↗</span></a>
-                <a href="https://medium.com/@jitheshdsouza19/decoding-transformers-how-attention-makes-them-work-4a91a3fe2371" aria-label="Read what I learned from implementing the transformer">What I learned <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/AI-Plans/Model-Diffing">View code <span aria-hidden="true">↗</span></a>
+                <a href="https://huggingface.co/collections/AIPlans/post-training-versions-qwen-06b">Models &amp; evaluations <span aria-hidden="true">↗</span></a>
               </div>
             </div>
           </li>
           <li>
             <span class="project-number" aria-hidden="true">03</span>
             <div class="project-body">
-              <p class="project-context">Neural networks · Image experiments</p>
-              <h3>Deep Dream</h3>
-              <div class="project-links">
-                <a href="https://github.com/JitheshPavan/Deep_Dream" aria-label="View Deep Dream code on GitHub">View code <span aria-hidden="true">↗</span></a>
-                <a href="https://medium.com/@jitheshdsouza19/neural-networks-dont-see-inputs-or-parameters-only-numbers-44ee316dfb60" aria-label="Read what I learned from Deep Dream">What I learned <span aria-hidden="true">↗</span></a>
-              </div>
+              <p class="project-context">BS–MS thesis · IISER Thiruvananthapuram · 2023–24</p>
+              <h3>Neural-network quantum states for fermionic systems</h3>
+              <p class="project-description">With Dr. Amal Medhi, I modeled strongly correlated fermions using neural-network quantum states and variational Monte Carlo. I simulated a 10 × 10 Hubbard lattice, observed a metal–insulator transition, and used singular value decomposition to address instability in the optimization.</p>
             </div>
           </li>
         </ul>
+        <div class="other-projects">
+          <h3>More experiments</h3>
+          <ul class="compact-work">
+            <li><a href="https://huggingface.co/spaces/dsouzaJithesh/AIAlignmentChatBot">AI Alignment Chatbot <span aria-hidden="true">↗</span></a><p>A retrieval-augmented chatbot focused on AI alignment.</p></li>
+            <li><a href="https://github.com/JitheshPavan/GPT_Translator">Transformer from scratch <span aria-hidden="true">↗</span></a><p>An implementation of the original transformer in PyTorch for machine translation.</p></li>
+            <li><a href="https://github.com/JitheshPavan/Deep_Dream">Deep Dream <span aria-hidden="true">↗</span></a><p>Generating artistic visuals with neural networks.</p></li>
+          </ul>
+        </div>
+      </section>
+
+      <section aria-labelledby="background">
+        <h2 id="background">Experience &amp; education</h2>
+        <dl class="timeline">
+          <div>
+            <dt>July 2025–<br>July 2026</dt>
+            <dd><strong>AI Safety Research Assistant · <a href="https://aiplans.org/">AIPlans</a></strong><br>Model post-training and evaluation for the Model Diffing project, from preference datasets to published checkpoints.</dd>
+          </div>
+          <div>
+            <dt>Mar–June<br>2025</dt>
+            <dd><strong>Computer vision intern · <a href="https://dobbe.ai/">Dobbe.ai</a></strong><br>Built dental detection and segmentation pipelines used in production, and a fast interim cavity-segmentation method using k-means clustering.</dd>
+          </div>
+          <div>
+            <dt>June–July<br>2024</dt>
+            <dd><strong>ML intern · ExpoSys Datalabs</strong><br>Developed machine-learning models for regression tasks.</dd>
+          </div>
+          <div>
+            <dt>2019–24</dt>
+            <dd><strong>BS–MS in Physics · IISER Thiruvananthapuram</strong><br>Minor in Data Science. First prize in Codebattle 2023 at Anvesha.</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section aria-labelledby="writing">
+        <h2 id="writing">Writing</h2>
+        <ul class="writing-list">
+          <li>
+            <p class="project-context">Research manuscript · Draft / work in preparation</p>
+            <h3><a href="https://drive.google.com/file/d/1e6PcO4q0jyi2mOR9Az7re6tISRv4k2Zy/view?usp=sharing">Evaluating Quantum Machine Learning Algorithms for Large Language Models in Healthcare Data <span aria-hidden="true">↗</span></a></h3>
+            <p>Research with Dr. Ahmed Farooq exploring quantum methods for sentiment and disease classification. Not yet published.</p>
+          </li>
+          <li>
+            <p class="project-context">Notes from building</p>
+            <h3><a href="https://medium.com/@jitheshdsouza19/decoding-transformers-how-attention-makes-them-work-4a91a3fe2371">Decoding Transformers: How Attention Makes Them Work <span aria-hidden="true">↗</span></a></h3>
+          </li>
+          <li>
+            <p class="project-context">Notes from experimenting</p>
+            <h3><a href="https://medium.com/@jitheshdsouza19/neural-networks-dont-see-inputs-or-parameters-only-numbers-44ee316dfb60">Neural Networks Don't See Inputs or Parameters, Only Numbers <span aria-hidden="true">↗</span></a></h3>
+          </li>
+        </ul>
+        <a class="all-writing" href="https://medium.com/@jitheshdsouza19">All writing on Medium <span aria-hidden="true">↗</span></a>
       </section>
 
       <footer>
         <p>Feel free to <a href="mailto:jithesh1602@gmail.com">get in touch</a>.</p>
-        <a class="back-top" href="#" aria-label="Back to top">↑</a>
+        <a class="back-top" href="#top" aria-label="Back to top">↑</a>
       </footer>
     </main>
   </body>
