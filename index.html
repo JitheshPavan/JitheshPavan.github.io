@@ -80,12 +80,14 @@
           <li>
             <span class="project-number" aria-hidden="true">01</span>
             <div class="project-body">
-              <p class="project-context"><span class="status">Ongoing research</span> · Sept 2026–present</p>
-              <h3>FutureProbes: looking ahead at model behavior</h3>
-              <p class="project-description">Can internal activations predict misaligned behavior before it appears in a model's outputs? I'm investigating this with lookahead linear probes, advised by Dr. Shivam Raval.</p>
+              <p class="project-context"><span class="status">Ongoing research</span> · AI evaluation</p>
+              <h3>Generic rubrics for AI evaluation</h3>
+              <p class="project-description">Can one rubric evaluate AI responses across different tasks? I'm investigating whether reusable rubrics can reduce the cost of expert annotation while preserving the quality of task-specific evaluation, starting with HealthBench.</p>
               <details class="project-details">
-                <summary><span class="when-closed">More details</span><span class="when-open">Less details</span><span class="sr-only"> about FutureProbes</span></summary>
-                <p class="project-description">I've implemented and tested a preliminary activation-extraction and probing framework, with experiments targeting reward hacking, sandbagging, manipulation, and deception.</p>
+                <summary><span class="when-closed">More details</span><span class="when-open">Less details</span><span class="sr-only"> about generic rubrics for AI evaluation</span></summary>
+                <p class="project-description">The study begins with a manual audit of 100 randomly sampled HealthBench criteria from UK AISI's Inspect AI implementation, separating reusable requirements from question-specific details to develop a fixed generic rubric.</p>
+                <p class="project-description">On about 50 separate evaluation questions, the plan is to grade the same saved model responses against both the generic rubric and each question's complete original rubric, using the same LLM judge and settings. With comparable score scales defined in advance, I'll compare score differences, systematic bias, correlations, and model rankings.</p>
+                <p class="project-description">Preregistered follow-ups will test whether physician responses or reference correct and incorrect answers help close any evaluation gap. The broader aim is to extend this approach to other benchmarks and test a single shared rubric across them.</p>
               </details>
             </div>
           </li>
